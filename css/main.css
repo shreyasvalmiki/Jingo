@@ -1,0 +1,108 @@
+body {
+	background-image: url('../img/puzzlegrey.png');
+	height: 100%;
+}
+
+#splash {
+	height: 100%;
+	width: 100%;
+	background-image: url('../img/background.jpg');
+	position:absolute;
+	top:-30px;
+	left:0px;
+}
+
+.profileicon {
+
+}
+#btnsignup {
+	margin-right: 0%;
+	margin-left: 1%;
+}
+#btnsignin {
+	margin-right: 1%;
+	margin-left: 0%;
+}
+
+#wrap {
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	/* Negative indent footer by it's height */
+	/*margin: 0 auto -60px;*/
+}
+
+/* Set the fixed height of the footer here */
+.push {
+	height: 40px;
+}
+#footer {
+	/*background-color: #1B1B1B;*/
+}
+
+/* Lastly, apply responsive CSS fixes as necessary */
+/*@media (max-width: 767px) {
+ #footer {
+ margin-left: -20px;
+ margin-right: -20px;
+ padding-left: 20px;
+ padding-right: 20px;
+ }
+ }*/
+
+#map_canvas{
+	height:200px;
+	width:300px;
+}
+
+#wrap > .container {
+	padding-top: 60px;
+}
+
+
+a.tip::before {
+    content: attr(data-tip) ;
+    font-size: 10px;
+    position:absolute;
+    z-index: 999;
+    white-space:nowrap;
+    bottom:9999px;
+    left: 50%;
+    background:#000;
+    color:#e0e0e0;
+    padding:0px 7px;
+    line-height: 24px;
+    height: 24px;
+    opacity: 0;
+    transition:opacity 0.4s ease-out;
+    }
+a.tip:hover::before {
+    opacity: 1;
+    bottom:-35px;
+}	
+
+
+.sticky {
+  -webkit-box-shadow: #DDD 0px 1px 2px;
+  position: relative;
+  background-color: #F4F39E;
+  border-color: #DEE184;
+  text-align: center;
+  margin: 2.5em 0px;
+  padding: 1.5em 1em;
+  -webkit-box-shadow: 0px 1px 3px rgba(0,0,0,0.25);
+  -moz-box-shadow: 0px 1px 3px rgba(0,0,0,0.25);
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.25);
+  font-family: Chalkboard, 'Comic Sans';
+}
+.sticky.taped:after {
+  display: block;
+  content: "";
+  position: absolute; 
+  width: 151px;
+  height: 35px;
+  top: -21px;
+  left: 25%;    
+  background: transparent url(tape.png) 0 0 no-repeat;
+}
+ 

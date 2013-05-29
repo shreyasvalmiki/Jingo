@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sign in</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<link rel="stylesheet" href="bootstrap/docs/assets/css/bootstrap.css">
+	 <link rel="stylesheet" href="bootstrap/docs/assets/css/bootstrap-responsive.css">
+
+    <!-- Le styles -->
+    
+    <style>
+	
+      body {
+	   padding-top: 40px;
+        
+            
+		
+		background-image:url('jingo.png'), url('background.jpg');
+        background-repeat:no-repeat, no-repeat;
+        background-position:left top;
+		
+		}
+      
+
+      .form-signin {
+	  
+
+	  font-family:Lucida Sans Unicode;
+	  //float: right;
+        max-width: 900px;
+        padding: 19px 29px 29px;
+       margin: 0 auto 20px; 
+        background-color: #fff;
+        border: 1px solid #e5e5e5;
+       -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
+        -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+           -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
+                box-shadow: 0 1px 2px rgba(0,0,0,.05);
+      }
+      .form-signin .form-signin-heading,
+      .form-signin .checkbox {
+        margin-bottom: 10px;
+      }
+      .form-signin input[type="text"],
+      .form-signin input[type="password"] {
+        font-size: 16px;
+        height: auto;
+      margin-bottom: 15px; 
+     padding: 7px 9px;
+      }
+
+    </style>
+	</head>
+   
+<body>
+
+    <div class="container">
+
+     <form class="form-signin" action="login11.php" method="post">
+			
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input Name="user" type="text" class="input-block-level" placeholder="User Name">
+        <input Name="pass" type="password" class="input-block-level" placeholder="Password"><br />
+        <label class="checkbox">
+        <input type="checkbox" value="remember-me"> Remember me
+        </label>			
+        <input Name="go" class="btn btn-info btn-large" type="submit" value="Sign In"/>&nbsp&nbsp&nbsp&nbsp&nbsp
+		<a href="#myModal" role="button" class="btn btn-danger btn-large" data-toggle="modal">Sign up</a>
+			   
+		
+		<!-- <a class="btn btn-danger btn-large" href="#Signup" role="button" data-toggle="modal">Sign up</a> -->
+		
+ 
+		<!-- Modal -->
+		<form class="form-signin" action="signup.php" method="post">
+		
+		<div id="myModal" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+		<div class="modal-header">
+		<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+		<h3 id="myModalLabel">Register Here</h3>
+		</div>
+  
+  <div class="modal-body">
+    <input name="UserName" type="text" class="input-block-level" placeholder="UserName" >
+	<input name="Password"  type="password" class="input-block-level" placeholder="Password">
+	<!-- <input type="password" class="input-block-level" placeholder="Confirm Password"> -->
+	<input name="Email"  type="text" class="input-block-level" placeholder="Email address">
+  </div>
+  
+  
+  <div class="modal-footer">
+    <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+    <input type="submit" name="Save"  class="btn btn-info" Value="Save changes"/>
+  </div>
+</div>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="bootstrap/docs/assets/js/bootstrap-modal.js"></script>
+	</form>
+
+  </body>
+</html>
+

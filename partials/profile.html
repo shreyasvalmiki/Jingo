@@ -1,0 +1,16 @@
+<div class="container">
+    <h3>Statuses:</h3>
+    <select class="input-xlarge" id="status" ng-model="chosen" ng-options="status.statusNm for status in statuses"></select>
+        <p>Message: {{chosen.statusMsg}}
+            </p>
+            <p>
+                Radius: {{chosen.radius}} Mile(s)
+            </p>
+    <button class="btn btn-info" ng-click="newStatus()">
+        New
+    </button>
+    <button class="btn btn-danger" ng-click="save()">
+        Save
+    </button>
+
+</div>

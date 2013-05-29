@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="jingo">
+    <head>
+        <title>jingo</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="description" content="" />
+        <meta name="author" content="svalmiki" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.min.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="stylesheet" type="text/css" href="css/splash.css">
+        
+        <script type="text/javascript" src="js/moment.min.js"></script>
+        <script type="text/javascript" src="js/md5.js"></script>
+        <script type="text/javascript" src="js/common-vars.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.6/angular.min.js"></script>
+        <script type="text/javascript" src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.3.0.js"></script>
+        <script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+        <script type="text/javascript" src="http://j.maxmind.com/app/geoip.js"></script>
+        <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
+        <script type="text/javascript" src="js/util.js"></script>
+        <script type="text/javascript" src="js/controller/ui-controllers.js"></script>
+        <script type="text/javascript" src="js/modernizr.js"></script>
+        <script type="text/javascript" src="js/angularjs/angular-resource.min.js"></script>
+        <script type="text/javascript" src="js/controller/controllers.js"></script>
+        <script type="text/javascript" src="js/filters.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/factory/login-factory.js"></script>
+        <script type="text/javascript" src="js/factory/feed-factory.js"></script>
+        <script type="text/javascript" src="js/factory/note-factory.js"></script>
+        <script type="text/javascript" src="js/factory/schedule-factory.js"></script>
+        <script type="text/javascript" src="js/factory/profile-factory.js"></script>
+    </head>
+
+    <body ng-controller="RootCtrl">
+        <div class="container-fluid">
+            <header class="header">
+                <div class="navbar">
+                    <div class="navbar-inner">
+                        <div class="container">
+                            <div class="pull-left">
+                                <a class="brand" href="#">jingo</a>
+                                <ul class="nav">
+                                    <li>
+                                        <a class="tip" data-tip="Feed Inbox" href="#/feed"> <i class="icon-inbox"> </i></a>
+                                        
+                                    </li>
+                                    <li class="profileicon" >
+                                        <a href="#/profile"> <i class="icon-user"> </i> </a>
+                                    </li>
+                                    <li>
+                                        <a class="tip" data-tip="Make New Note" href="#/makenote"> <i class="icon-plus-sign"> </i> </a>
+                                    </li>
+                                </ul>
+                                <ul class="nav pull-right" ng-controller="LoginCtrl">
+                                    <li>
+                                        <a class="tip" data-tip="Logout" ng-click="logout()"> <i class="icon-off"> </i> </a>
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div id="wrap" class="container" role="main">
+                
+                <td><label class="checkbox"><input id="useMap" type="checkbox" ng-change="useMapChanged()" ng-model="useMap">Use Map</label></td>
+    
+                <div id="map_canvas"></div>
+                
+                
+                <div ng-view>
+
+                </div>
+
+            </div>
+            <!--
+            <footer id="footer">
+            <div class="navbar navbar-fixed-bottom">
+            <div class="navbar-inner">
+            <div class="container">
+            <div class="pull-left">
+            <ul class="nav">
+            <li class="profileicon" >
+            &copy; Shreyas Valmiki &amp; Shweta Trivedi
+            </li>
+            </ul>
+            </div>
+            </div>
+            </div>
+            </div>
+            </footer> -->
+        </div>
+
+    </body>
+</html>

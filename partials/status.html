@@ -1,0 +1,24 @@
+<div class="container">
+    <br />
+    <input class="input-xlarge" type="text" id="statusName" ng-model="statusNm" placeholder="Name">
+    <br />
+    <input class="input-xlarge" type="text" id="statusMsg" ng-model="statusMsg" placeholder="Message">
+    
+    <table class="table table-condensed"
+            <tr>
+                <td>
+                    <label>Select Privacy</label>
+                    <select class="input-xlarge" id="privacy" ng-model="privacy" ng-options="priv.privDesc for priv in privOps">
+                    </select>
+                </td>
+                <td>
+                    <label for="radius">Radius</label>
+                    <select class="input-xlarge" id="radius" ng-model="radius" ng-options="rad.r +' '+ rad.text for rad in radiuses">
+                        
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <br />
+        <button class="btn btn-danger" id="statusSave" ng-click="save()">Save</button>
+</div>

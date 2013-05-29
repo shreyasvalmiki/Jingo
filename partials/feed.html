@@ -1,0 +1,29 @@
+<div class="container">
+    <!-- <td><label class="checkbox">
+        <input id="useMap" type="checkbox" ng-model="useMap">
+        Use Map</label></td>
+    <div id="map_canvas"></div> -->
+    <label>Filters</label>
+    <select class="input-xlarge" id="criteria" ng-model="criteria" ng-options="crit.text for crit in criterias">
+    </select>
+    
+    <input class="input-xlarge" type="text" ng-model="searchTxt" placeholder="Search">
+
+    <button class="btn btn-danger" ng-click="search()">Search</button>
+    
+    <h1>Newsfeed</h1>
+
+    <div id="noteContainer">
+        <ul class="unstyled">
+            <li class="sticky taped" ng-repeat="note in notes">
+                <h3><a>{{note.notedBy}}</a></h3>
+                <hr />
+                <p><b>{{note.noteTxt}}</b></p>
+                <hr />
+                <p>Distance: {{note.distance}} (as of {{note.dtReceived}})</p>
+                <p></p>
+            </li>
+        </ul>
+    </div>
+
+</div>
